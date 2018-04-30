@@ -1,0 +1,34 @@
+CREATE TABLE blogUsers IF NOT EXISTS (
+  id BIGINT ZEROFILL PRIMARY KEY auto_increment,
+  userName VARCHAR(30) UNIQUE NOT NULL,
+  pwd VARCHAR(20) NOT NULL,
+  status BOOLEAN NOT NULL DEFAULT 0
+)ENGINE=InnoDB,auto_increment=1;
+
+CREATE  TABLE blogs(
+ blogId BIGINT ZEROFILL PRIMARY KEY AUTO_INCREMENT,
+ blogTitle VARCHAR(50) NOT NULL ,
+  blogContent TEXT NOT NULL ,
+  published_time DATETIME NOT NULL
+)ENGINE =InnoDB,DEFAULT CHARSET=utf8,auto_increment=1;
+
+CREATE  TABLE  userInfo(
+  userId BIGINT ZEROFILL PRIMARY KEY auto_increment,
+  sex ENUM('男','女','蒙面侠'),
+  fav VARCHAR(100),
+  login_at DATE NOT NULL ,
+  email VARCHAR(20) UNIQUE NOT NULL  ,
+  hit BIGINT UNSIGNED NOT NULL ,
+  blogCount INT UNSIGNED NOT NULL
+)ENGINE =InnoDB,DEFAULT CHARSET=utf8,auto_increment=1;
+
+CREATE TABLE  association(
+ userId BIGINT ZEROFILL ,
+  blogId BIGINT ZEROFILL,
+  hit BIGINT UNSIGNED NOT NULL ,
+  created_at DATETIME NOT NULL
+)ENGINE =InnoDB,DEFAULT CHARSET=utf8;
+
+ALTER TABLE userInfo ADD CONSTRAINT user_info FOREIGN KEY (userId) REFERENCES blogUsers(id);
+ALTER TABLE association ADD  CONSTRAINT  asso_user FOREIGN KEY (userId) REFERENCES blogUsers(id);
+ALTER TABLE association ADD  CONSTRAINT  asso_blog FOREIGN KEY (blogId) REFERENCES blogUsers(blogId);

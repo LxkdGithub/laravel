@@ -1,0 +1,38 @@
+/*top*/
+div.top{
+     margin-left: 800px;
+     width:90%;
+     height:20px;
+}
+.top a{
+     text-decoration: none;
+
+}
+.top a:hover{
+     color:red;
+}
+div.top>span {
+     margin-left: 5px;
+     float:left;
+     font-size:14px;
+     text-decoration: none;
+}
+
+.top li{
+     margin-left: 5px;
+     float: left;
+     font-size: 14px;
+     list-style: none;
+}
+/*left-----------------------------------------------*/
+.left{
+     width:350px;
+     height:600px;
+     margin-top:20px;
+     margin-left: 230px;
+     background: #d3ada5;
+}
+
+
+
+/*content---------------------------------------------*/

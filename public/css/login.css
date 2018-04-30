@@ -1,0 +1,81 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #4b9dff;
+}
+
+.form{
+    /*position: absolute;*/
+    margin-top:150px;
+    margin-left:700px;
+    background: white;
+    width:300px;
+    height:400px;
+    padding: 20px 30px 20px 30px;
+}
+form>div{
+    width: 400px;
+    height: 40px;
+    margin: 20px;
+}
+
+input{
+    width: 200px;
+    height: 37px;
+    /*position: relative;*/
+    border: solid 1px #4b9dff;
+    border-left: none;
+    background: white;
+}
+
+.label_userName,.label_pwd{
+    width:80px;
+    height: 35px;
+    float:left;
+    padding: 0 0 0 5px;
+    line-height: 35px;
+    /*box-sizing: border-box;*/
+    border:#4b9dff solid 1px;
+    border-right: none;
+    color: #aaaaaa;
+}
+div.doAction{
+    /*width:200px;*/
+}
+input[type=submit]{
+    border:solid 1px #1e2539;
+    width:100px;
+    background: #4b9dff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+input[type=reset]{
+    border-radius: 5px;
+    border:solid 1px #1e2539;
+    width:100px;
+    margin-left: 60px;
+    background: #4b9dff;
+    margin-top: 20px;
+}
+#autoLogin{
+    float: left;
+    width:15px;
+    height: 15px;
+
+}
+.label_autoLogin{
+    float: left;
+}
+.forget{
+    margin-left: 100px;
+}
+.errorDisplay{
+    display: none;
+    height:80px;
+    width:280px;
+    border-radius: 10px;
+    border:solid 2px red;
+    margin-top: -180px;
+    background: #fbb0ad;
+    /*position: absolute;*/
+}
